@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <!--
     Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
 
@@ -19,61 +19,6 @@
     specific language governing permissions and limitations
     under the License.
 -->
-<!--
-<html>
-
-<head>
-<meta name="index" content="width=320; user-scalable=no" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<title>Auth Demo</title>
-<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.0rc2.css" type="text/css" charset="utf-8" />
-<script type="text/javascript" src="js/jquery-1.7.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/phonegap-1.2.0.js"></script>
-<script src="jquery.mobile/jquery.mobile-1.0rc2.js"></script>
-<script type="text/javascript" charset="utf-8" src="/PhoneGapWS/LoginSample/www/js/index.js"></script>
-</head>
-
-<body onload="init()">
-
-<div id="loginPage" data-role="page">
-
-<div data-role="header">
-<h1>Auth Demo</h1>
-</div>
-
-<div data-role="content">
-
-<form id="loginForm">
-<div data-role="fieldcontain" class="ui-hide-label">
-<label for="username">Username:</label>
-<input type="text" name="username" id="username" value="" placeholder="Username" />
-</div>
-
-<div data-role="fieldcontain" class="ui-hide-label">
-<label for="password">Password:</label>
-<input type="password" name="password" id="password" value="" placeholder="Password" />
-</div>
-
-<input type="submit" value="Login" id="submitButton">
-</form>
-
-</div>
-
-<div data-role="footer">
-<h4>© Camden Enterprises</h4>
-</div>
-
-</div>
-
-<script>
-$("#loginPage").live("pageinit", function(e) {
-checkPreAuth();
-});
-</script>
-
-</body>
-</html>
--->
 
 <!DOCTYPE html>
 <html>
@@ -89,22 +34,26 @@ checkPreAuth();
 <title> Login Page </title>
 </head>
 <body>
+<!-- create the login box -->
 <section id="loginBox">
 <form method="post" class="minimal">
 <p><b><u>Login</u></b></p>
 <p>
 <label for="username">
 Username:
-<input type="text" name="username" id="username" placeholder="" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required"/>
+<!-- create the input field, require it and make sure username has proper characters -->
+<input type="text" name="username" id="username" placeholder="" required="required"/>
 </label>
 </p>
 <p>
 <label for="password">
 Password:
-<input type="password" name="password" id="password" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+<!--create the password field-->
+<input type="password" name="password" id="password" placeholder="" required="required" />
 </label>
 </p>
 <p>
+<!--create the submit and register buttons, run JS functions when clicked-->
 <button type="button" value="Login" id="submit" onclick="validate()">Login</button>
 <button type="button" value="Register" id="reg" onclick="register()">Register</button>
 </form>
