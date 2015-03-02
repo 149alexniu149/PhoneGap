@@ -17,24 +17,28 @@
  * under the License.
  */
 var attempt = 3;
-alert("Make sure you register an account before trying to log in.");
 //register an account
 function register(){
-	user = document.getElementById("username").value;
-	pass = document.getElementById("password").value;
+	var user = document.getElementById("username").value;
+	var pass = document.getElementById("password").value;
 	if(user == "" || pass == ""){
 		//make sure the user actually has a name and pass
 		alert("You need to enter at least one character into each field.");
 	}
 	else{
-		alert("You may now log in with your credentials.")
+		//if username and pass are valid, store them in a new key in local storage
+		window.localStorage.setItem(user,user);
+		window.localStorage.setItem(pass, pass);
+		alert("Username: "+window.localStorage.getItem(user)+" Password: "+window.localStorage.getItem(pass));
+		return false;
 	}
 }
 function validate(){
 	var username = document.getElementById("username").value;
 	var password = document.getElementById("password").value;
-	//allow login if the password and username match what was registered
-	if( username==user && password == pass){
+	//allow login if the password and username match what was registered in local key under that name
+	if( username==window.localStorage.getItem(username) && password == window.localStorage.getItem(password)){
+		//go to success page if login was successful
 		window.location="sample.html"
 		return false;
 	}
