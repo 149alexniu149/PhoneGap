@@ -22,42 +22,42 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<!--include fonts-->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600" rel="stylesheet" type="text/css">
-<!--include css file-->
-<link rel="stylesheet" type="text/css" href="css/index.css">
-<!--include javascript-->
-<script src="js/index.js"></script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=yes">
-<title> Login Page </title>
-</head>
-<body>
-<h1>Created by Alex Niu</h1>
-<!-- create the login box -->
-<section id="loginBox">
-<form method="post" class="minimal">
-<p><b><u>Login</u></b></p>
-<p>
-<label for="username">
-Username:
-<!-- create the input field, require it and make sure username has proper characters -->
-<input type="text" name="username" id="username" placeholder="" required="required"/>
-</label>
-</p>
-<p>
-<label for="password">
-Password:
-<!--create the password field-->
-<input type="password" name="password" id="password" placeholder="" required="required" />
-</label>
-</p>
-<p>
-<!--create the submit and register buttons, run JS functions when clicked-->
-<button type="button" value="Login" id="submit" onclick="validate()">Login</button>
-<button type="button" value="Register" id="reg" onclick="register()">Register</button>
-</form>
-</section>
-</body>
+	<head>
+		<!--include fonts-->
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600" rel="stylesheet" type="text/css">
+		<!--include css file-->
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!--include javascript-->
+		<script src="js/index.js"></script>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, user-scalable=yes">
+		<title> Login Page </title>
+	</head>
+	<body>
+		<h1>Created by Alex Niu</h1>
+		<!-- create the login box -->
+		<section id="loginBox">
+			<form method="post" class="minimal">
+			<p><b><u>Login</u></b></p>
+			<p>
+			<label for="username">
+			Username:
+			<!-- create the input field, require it and make sure username has proper characters -->
+			<input type="text" name="username" id="username" placeholder="" required="required"/>
+			</label>
+			</p>
+			<p>
+			<label for="password">
+			Password:
+			<!--create the password field-->
+			<input type="password" name="password" id="password" placeholder="" required="required" />
+			</label>
+			</p>
+			<p>
+			<!--create the submit and register buttons, run JS functions when clicked-->
+			<button type="button" value="Login" id="submit" onclick="validate()">Login</button>
+			<button type="button" value="Register" id="reg" onclick="register()">Register</button>
+			</form>
+		</section>
+	</body>
 </html>
